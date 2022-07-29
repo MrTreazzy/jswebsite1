@@ -1,4 +1,4 @@
-let input = document.getElementById("input1")
+﻿let input = document.getElementById("input1")
 let submit = document.getElementById("submit")
 let tap = document.getElementById("tap")
 let body = document.getElementById("body")
@@ -67,7 +67,7 @@ setTimeout(()=> {
 
 let leth1 = document.getElementById('leth1');
 
-var letters = "шаровнездийыубцяк"
+var letters = "шщаровнеёсздийыубцяк"
 var random1 = Math.round(Math.random() * letters.length)
 
 leth1.onclick = () => {
