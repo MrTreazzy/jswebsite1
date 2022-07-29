@@ -67,12 +67,12 @@ setTimeout(()=> {
 
 let leth1 = document.getElementById('leth1');
 
-var letters = "шщаровнеёсздийыубцяк"
+var letters = ['ш','щ','а','р','о','в','н','е','ё','с','з','д','и','й','ы','у','б','ц','я','к',' шар',' ров',' нерв',' роса',' норов',' весна',' аврора',' нос',' сон',' раз',' зуб',' бор',' рак',' код',' дар',' ряд',' дуб',' сын',' баня',' ядро',' один',' нива',' арбуз',' знак',' конец',' цапля',' время',' образ',' зрение']
 var random1 = Math.round(Math.random() * letters.length)
 
 leth1.onclick = () => {
 	leth1.textContent = ""
-	for (let i = 0; i < letters.length; i++) {
+	for (let i = 0; i < 8; i++) {
 		random1 = Math.round(Math.random() * letters.length)
 		if (letters[random1] != undefined) {
 			leth1.textContent += letters[random1]
