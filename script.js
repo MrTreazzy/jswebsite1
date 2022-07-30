@@ -70,12 +70,23 @@ let leth1 = document.getElementById('leth1');
 var letters = ['ш','щ','а','р','о','в','н','е','ё','с','з','д','и','й','ы','у','б','ц','я','к','п','л','т','м','г','ж','ч','ф','ю',' вес',' шар',' ров',' нерв',' роса',' сено',' норов',' весна',' аврора',' нос',' сон',' раз',' зуб',' бор',' рак',' код',' дар',' ряд',' дуб',' сын',' баня',' ядро',' один',' нива',' арбуз',' знак',' конец',' цапля',' время',' образ',' зрение',' год',' лев',' пуд',' том',' мор',' суп',' ток',' пар',' рот',' тук',' жар',' час',' фунт',' юла',' парта',' агроном',' муравей',' дети',' игрушка',' фанера',' сюрприз',' футбол',' тамара',' паша',' лена',' мария',' толя',' федор',' юлия',' дайте',' мел',' положите',' ручку',' принесите',' журнал']
 var random1 = Math.round(Math.random() * letters.length)
 
-leth1.onclick = () => {
+function randomlettfunc() {
 	leth1.textContent = ""
 	for (let i = 0; i < 8; i++) {
 		random1 = Math.round(Math.random() * letters.length)
 		if (letters[random1] != undefined) {
 			leth1.textContent += letters[random1]
 		}
+	}
+}
+
+leth1.onclick = () => {randomlettfunc();}
+
+document.addEventListener('keydown', logKey);
+
+function logKey(e) {
+	let a = `${e.key}`
+	if (a == " ") {
+		randomlettfunc();
 	}
 }
