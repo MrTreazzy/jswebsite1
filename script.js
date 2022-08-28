@@ -3,57 +3,57 @@ let submit = document.getElementById("submit")
 let tap = document.getElementById("tap")
 let body = document.getElementById("body")
 
-submit.onclick = () => {
-	if (input.value == "freddy go brrr") {
-		let img = document.getElementById("img")
-		img.setAttribute("src", "https://c.tenor.com/ZO1_WS7f-4YAAAAC/fnaf-freddy.gif")
-		tap.setAttribute("class", "tap")
-		let taptext = "TAP X 10 TIMES! "
-		tap.textContent = taptext
-		let n = 0
-		document.addEventListener('keydown', logKey);
-		function logKey(e) {
-			let a = `${e.key}`
-			if (a == "x") {
-				n = n + 1
-				if (input.value == "freddy go brrr") {
-					tap.textContent = taptext + n
-				}
-			}
-			if (n == 10) {
-				img.removeAttribute("src")
-				img.setAttribute("alt", "Oh im sorry)")
-				tap.textContent = ""
-				input.value = ""
-				n = 0
-			}
-		}
-	}
+// submit.onclick = () => {
+// 	if (input.value == "freddy go brrr") {
+// 		let img = document.getElementById("img")
+// 		img.setAttribute("src", "https://c.tenor.com/ZO1_WS7f-4YAAAAC/fnaf-freddy.gif")
+// 		tap.setAttribute("class", "tap")
+// 		let taptext = "TAP X 10 TIMES! "
+// 		tap.textContent = taptext
+// 		let n = 0
+// 		document.addEventListener('keydown', logKey);
+// 		function logKey(e) {
+// 			let a = `${e.key}`
+// 			if (a == "x") {
+// 				n = n + 1
+// 				if (input.value == "freddy go brrr") {
+// 					tap.textContent = taptext + n
+// 				}
+// 			}
+// 			if (n == 10) {
+// 				img.removeAttribute("src")
+// 				img.setAttribute("alt", "Oh im sorry)")
+// 				tap.textContent = ""
+// 				input.value = ""
+// 				n = 0
+// 			}
+// 		}
+// 	}
 
-	let timerstr = input.value
-	let timer = Number(timerstr);
-	if (timer == 666) {
-		body.style.backgroundColor = "#f00"
-	}
-	if (timer > 0) {
-		let h3timer = document.getElementById("timer")
-		timer = timer - 1
-		h3timer.textContent = timer
-		let time = setInterval(() => {
-			timer = timer - 1
-			if (timer <= 0) {
-				setTimeout(()=> {
-					h3timer.textContent = "Time is up!"
-					clearInterval(time)
-					setTimeout(()=> {
-						h3timer.textContent = "Enter the time..."
-					}, 3000)
-				}, 1000)
-			}
-			h3timer.textContent = timer
-		}, 1000)
-	}
-}
+// 	let timerstr = input.value
+// 	let timer = Number(timerstr);
+// 	if (timer == 666) {
+// 		body.style.backgroundColor = "#f00"
+// 	}
+// 	if (timer > 0) {
+// 		let h3timer = document.getElementById("timer")
+// 		timer = timer - 1
+// 		h3timer.textContent = timer
+// 		let time = setInterval(() => {
+// 			timer = timer - 1
+// 			if (timer <= 0) {
+// 				setTimeout(()=> {
+// 					h3timer.textContent = "Time is up!"
+// 					clearInterval(time)
+// 					setTimeout(()=> {
+// 						h3timer.textContent = "Enter the time..."
+// 					}, 3000)
+// 				}, 1000)
+// 			}
+// 			h3timer.textContent = timer
+// 		}, 1000)
+// 	}
+// }
 
 
 
@@ -61,10 +61,27 @@ submit.onclick = () => {
 
 setTimeout(()=> {
 	if (input.value == "f") {
-	let item2 = document.getElementById("h1").setAttribute("class", "h1script")
+		let item2 = document.getElementById("h1").setAttribute("class", "h1script")
 	}
 }, 7000)
 
+let input1 = 0
+let proj = 0
+let jizn = 0
+let vin = 0
+let regen = 0
+submit.onclick = () => {
+	input1 = input.value
+	console.log(input1[0,3]);
+	proj = input1[0] * 10
+	console.log(15 * (100 - proj) + 300);
+	jizn = input1[3] * 10
+	console.log(15 * jizn + 300);
+	vin = input1[6] * 10
+	console.log(((1800 - 400) / 100) * vin + 400);
+	regen = input1[6] * 10
+	console.log(((2000 - 500) / 100) * (100 - regen) + 500);
+}
 
 let leth1 = document.getElementById('leth1');
 
